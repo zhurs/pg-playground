@@ -66,6 +66,7 @@ private fun makeUpdates(ids: List<Long>) {
 }
 
 private fun printStats() {
+    println()
     println("=== ${LocalDateTime.now()} ===")
 
     transaction {
@@ -104,6 +105,7 @@ private fun printFullScanEla() {
 }
 
 private fun vacuum(ds: DataSource) {
+    println()
     println("*** VACUUM ***")
     ds.connection.use { conn ->
         conn.createStatement().use { stm ->
