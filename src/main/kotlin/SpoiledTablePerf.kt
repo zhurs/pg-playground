@@ -13,7 +13,8 @@ import javax.sql.DataSource
 import kotlin.random.Random
 
 const val ROWS_COUNT = 4000
-const val DATA_FIELD_SIZE = 1600
+const val DATA_FIELD_SIZE = 1000
+
 const val UPDATE_TRX_NUMBER = 100
 const val UPDATE_ROWS_NUMBER = 1000
 
@@ -24,14 +25,15 @@ fun main(): Unit = LocalPostgres().use { pg ->
     printStats()
 
     repeat(10) {
-        makeUpdates(ids)
+        makeUpdates(pg.dataSource, ids)
         printStats()
     }
 
     vacuum(pg.dataSource)
+    printStats()
 
     repeat(10) {
-        makeUpdates(ids)
+        makeUpdates(pg.dataSource, ids)
         printStats()
     }
 }
@@ -51,15 +53,21 @@ private fun initData(ids: List<Long>) {
     }
 }
 
-private fun makeUpdates(ids: List<Long>) {
-    repeat(UPDATE_TRX_NUMBER) {
-        transaction {
-            BatchUpdateStatement(TestTable).apply {
-                ids.shuffled().take(UPDATE_ROWS_NUMBER).forEach {
-                    addBatch(EntityID(it, TestTable))
-                    this[TestTable.rnd] = Random.nextLong()
+private fun makeUpdates(ds: DataSource, ids: List<Long>) {
+    ds.connection.use { conn ->
+        // concurrent transaction to emulate real database and complicate HOT-optimization
+        conn.createStatement().use { it.execute("select 1") }
+
+
+        repeat(UPDATE_TRX_NUMBER) {
+            transaction {
+                BatchUpdateStatement(TestTable).apply {
+                    ids.shuffled().take(UPDATE_ROWS_NUMBER).forEach {
+                        addBatch(EntityID(it, TestTable))
+                        this[TestTable.rnd] = Random.nextLong()
+                    }
+                    execute(this@transaction)
                 }
-                execute(this@transaction)
             }
         }
     }
@@ -108,6 +116,7 @@ private fun vacuum(ds: DataSource) {
     println()
     println("*** VACUUM ***")
     ds.connection.use { conn ->
+        conn.autoCommit = true
         conn.createStatement().use { stm ->
             stm.execute("VACUUM FULL ANALYZE ${TestTable.tableName}")
         }
@@ -122,6 +131,7 @@ class LocalPostgres() : AutoCloseable {
         jdbcUrl = postgresContainer.jdbcUrl
         username = postgresContainer.username
         password = postgresContainer.password
+        isAutoCommit = false
     }
 
     val exposed = Database.connect(dataSource)

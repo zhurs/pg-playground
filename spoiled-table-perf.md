@@ -1,87 +1,91 @@
 ```
-=== 2022-12-21T09:07:27.316947 ===
-Stats: rows_cnt: 4000, table_size: 8192 kB, live tuples: 4000, dead tuples: 0, vacuum_cnt: 0, autovacuum_cnt: 0
-> fullscan ela: 0.734ms
+=== 2022-12-21T09:28:39.847800 ===
+Stats: rows_cnt: 4000, table_size: 4760 kB, live tuples: 4000, dead tuples: 0, vacuum_cnt: 0, autovacuum_cnt: 0
+> fullscan ela: 0.721ms
 
-=== 2022-12-21T09:07:29.008569 ===
-Stats: rows_cnt: 4000, table_size: 95 MB, live tuples: 4000, dead tuples: 44641, vacuum_cnt: 0, autovacuum_cnt: 0
-> fullscan ela: 7.472ms
+=== 2022-12-21T09:28:42.660669 ===
+Stats: rows_cnt: 4000, table_size: 117 MB, live tuples: 4000, dead tuples: 94000, vacuum_cnt: 0, autovacuum_cnt: 0
+> fullscan ela: 7.238ms
 
-=== 2022-12-21T09:07:30.777408 ===
-Stats: rows_cnt: 4000, table_size: 181 MB, live tuples: 4000, dead tuples: 82055, vacuum_cnt: 0, autovacuum_cnt: 0
-> fullscan ela: 14.558ms
+=== 2022-12-21T09:28:46.077552 ===
+Stats: rows_cnt: 4000, table_size: 223 MB, live tuples: 4000, dead tuples: 196558, vacuum_cnt: 0, autovacuum_cnt: 0
+> fullscan ela: 24.487ms
 
-=== 2022-12-21T09:07:32.943393 ===
-Stats: rows_cnt: 4000, table_size: 266 MB, live tuples: 4000, dead tuples: 125603, vacuum_cnt: 0, autovacuum_cnt: 0
-> fullscan ela: 25.249ms
+=== 2022-12-21T09:28:50.328191 ===
+Stats: rows_cnt: 4000, table_size: 328 MB, live tuples: 4000, dead tuples: 288939, vacuum_cnt: 0, autovacuum_cnt: 0
+> fullscan ela: 30.942ms
 
-=== 2022-12-21T09:07:35.145717 ===
-Stats: rows_cnt: 4000, table_size: 352 MB, live tuples: 4000, dead tuples: 172526, vacuum_cnt: 0, autovacuum_cnt: 0
-> fullscan ela: 31.464ms
+=== 2022-12-21T09:28:54.493378 ===
+Stats: rows_cnt: 4000, table_size: 434 MB, live tuples: 4000, dead tuples: 384601, vacuum_cnt: 0, autovacuum_cnt: 0
+> fullscan ela: 38.238ms
 
-=== 2022-12-21T09:07:37.302382 ===
-Stats: rows_cnt: 4000, table_size: 438 MB, live tuples: 4000, dead tuples: 217310, vacuum_cnt: 0, autovacuum_cnt: 0
-> fullscan ela: 38.968ms
+=== 2022-12-21T09:28:58.665679 ===
+Stats: rows_cnt: 4000, table_size: 539 MB, live tuples: 4000, dead tuples: 480018, vacuum_cnt: 0, autovacuum_cnt: 0
+> fullscan ela: 63.222ms
 
-=== 2022-12-21T09:07:39.397975 ===
-Stats: rows_cnt: 4000, table_size: 524 MB, live tuples: 4000, dead tuples: 265243, vacuum_cnt: 0, autovacuum_cnt: 0
-> fullscan ela: 63.301ms
+=== 2022-12-21T09:29:02.888648 ===
+Stats: rows_cnt: 4000, table_size: 645 MB, live tuples: 4000, dead tuples: 570692, vacuum_cnt: 0, autovacuum_cnt: 0
+> fullscan ela: 64.655ms
 
-=== 2022-12-21T09:07:41.896524 ===
-Stats: rows_cnt: 4000, table_size: 610 MB, live tuples: 4000, dead tuples: 306061, vacuum_cnt: 0, autovacuum_cnt: 0
-> fullscan ela: 65.891ms
+=== 2022-12-21T09:29:07.350694 ===
+Stats: rows_cnt: 4000, table_size: 750 MB, live tuples: 4000, dead tuples: 671157, vacuum_cnt: 0, autovacuum_cnt: 0
+> fullscan ela: 69.504ms
 
-=== 2022-12-21T09:07:44.183464 ===
-Stats: rows_cnt: 4000, table_size: 696 MB, live tuples: 4000, dead tuples: 342003, vacuum_cnt: 0, autovacuum_cnt: 0
-> fullscan ela: 73.762ms
+=== 2022-12-21T09:29:11.662076 ===
+Stats: rows_cnt: 4000, table_size: 856 MB, live tuples: 4000, dead tuples: 755761, vacuum_cnt: 0, autovacuum_cnt: 0
+> fullscan ela: 76.242ms
 
-=== 2022-12-21T09:07:46.741295 ===
-Stats: rows_cnt: 4000, table_size: 781 MB, live tuples: 4000, dead tuples: 394793, vacuum_cnt: 0, autovacuum_cnt: 0
-> fullscan ela: 74.111ms
+=== 2022-12-21T09:29:15.930575 ===
+Stats: rows_cnt: 4000, table_size: 961 MB, live tuples: 4000, dead tuples: 853160, vacuum_cnt: 0, autovacuum_cnt: 0
+> fullscan ela: 82.888ms
 
-=== 2022-12-21T09:07:49.360478 ===
-Stats: rows_cnt: 4000, table_size: 867 MB, live tuples: 4000, dead tuples: 438655, vacuum_cnt: 0, autovacuum_cnt: 0
-> fullscan ela: 81.288ms
+=== 2022-12-21T09:29:20.127179 ===
+Stats: rows_cnt: 4000, table_size: 1067 MB, live tuples: 4000, dead tuples: 951521, vacuum_cnt: 0, autovacuum_cnt: 0
+> fullscan ela: 87.837ms
 
 *** VACUUM ***
 
-=== 2022-12-21T09:08:02.361982 ===
-Stats: rows_cnt: 4000, table_size: 95 MB, live tuples: 4000, dead tuples: 46127, vacuum_cnt: 0, autovacuum_cnt: 0
-> fullscan ela: 3.323ms
+=== 2022-12-21T09:29:31.573523 ===
+Stats: rows_cnt: 4000, table_size: 4688 kB, live tuples: 4000, dead tuples: 0, vacuum_cnt: 0, autovacuum_cnt: 0
+> fullscan ela: 0.932ms
 
-=== 2022-12-21T09:08:04.096678 ===
-Stats: rows_cnt: 4000, table_size: 181 MB, live tuples: 4000, dead tuples: 84353, vacuum_cnt: 0, autovacuum_cnt: 0
-> fullscan ela: 18.461ms
+=== 2022-12-21T09:29:34.213985 ===
+Stats: rows_cnt: 4000, table_size: 117 MB, live tuples: 4000, dead tuples: 102000, vacuum_cnt: 0, autovacuum_cnt: 0
+> fullscan ela: 3.614ms
 
-=== 2022-12-21T09:08:06.034357 ===
-Stats: rows_cnt: 4000, table_size: 267 MB, live tuples: 4000, dead tuples: 132174, vacuum_cnt: 0, autovacuum_cnt: 0
-> fullscan ela: 36.162ms
+=== 2022-12-21T09:29:40.592789 ===
+Stats: rows_cnt: 4000, table_size: 223 MB, live tuples: 4000, dead tuples: 201000, vacuum_cnt: 0, autovacuum_cnt: 0
+> fullscan ela: 35.835ms
 
-=== 2022-12-21T09:08:08.145945 ===
-Stats: rows_cnt: 4000, table_size: 352 MB, live tuples: 4000, dead tuples: 176607, vacuum_cnt: 0, autovacuum_cnt: 0
-> fullscan ela: 54.422ms
+=== 2022-12-21T09:29:46.799901 ===
+Stats: rows_cnt: 4000, table_size: 329 MB, live tuples: 4000, dead tuples: 290451, vacuum_cnt: 0, autovacuum_cnt: 0
+> fullscan ela: 44.760ms
 
-=== 2022-12-21T09:08:10.455007 ===
-Stats: rows_cnt: 4000, table_size: 439 MB, live tuples: 4000, dead tuples: 221479, vacuum_cnt: 0, autovacuum_cnt: 0
-> fullscan ela: 51.492ms
+=== 2022-12-21T09:29:51.339164 ===
+Stats: rows_cnt: 4000, table_size: 434 MB, live tuples: 4000, dead tuples: 385139, vacuum_cnt: 0, autovacuum_cnt: 0
+> fullscan ela: 52.316ms
 
-=== 2022-12-21T09:08:12.738802 ===
-Stats: rows_cnt: 4000, table_size: 524 MB, live tuples: 4000, dead tuples: 265048, vacuum_cnt: 0, autovacuum_cnt: 0
-> fullscan ela: 56.866ms
+=== 2022-12-21T09:29:55.262306 ===
+Stats: rows_cnt: 4000, table_size: 540 MB, live tuples: 4000, dead tuples: 480576, vacuum_cnt: 0, autovacuum_cnt: 0
+> fullscan ela: 60.763ms
 
-=== 2022-12-21T09:08:15.105206 ===
-Stats: rows_cnt: 4000, table_size: 610 MB, live tuples: 4000, dead tuples: 309308, vacuum_cnt: 0, autovacuum_cnt: 0
-> fullscan ela: 63.436ms
+=== 2022-12-21T09:29:59.115825 ===
+Stats: rows_cnt: 4000, table_size: 645 MB, live tuples: 4000, dead tuples: 578978, vacuum_cnt: 0, autovacuum_cnt: 0
+> fullscan ela: 66.322ms
 
-=== 2022-12-21T09:08:17.513773 ===
-Stats: rows_cnt: 4000, table_size: 696 MB, live tuples: 4000, dead tuples: 353639, vacuum_cnt: 0, autovacuum_cnt: 0
-> fullscan ela: 68.877ms
+=== 2022-12-21T09:30:02.824601 ===
+Stats: rows_cnt: 4000, table_size: 751 MB, live tuples: 4000, dead tuples: 665457, vacuum_cnt: 0, autovacuum_cnt: 0
+> fullscan ela: 73.936ms
 
-=== 2022-12-21T09:08:20.037215 ===
-Stats: rows_cnt: 4000, table_size: 782 MB, live tuples: 4000, dead tuples: 396775, vacuum_cnt: 0, autovacuum_cnt: 0
-> fullscan ela: 75.490ms
+=== 2022-12-21T09:30:06.498984 ===
+Stats: rows_cnt: 4000, table_size: 856 MB, live tuples: 4000, dead tuples: 761894, vacuum_cnt: 0, autovacuum_cnt: 0
+> fullscan ela: 74.065ms
 
-=== 2022-12-21T09:08:22.582597 ===
-Stats: rows_cnt: 4000, table_size: 868 MB, live tuples: 4000, dead tuples: 441605, vacuum_cnt: 0, autovacuum_cnt: 0
-> fullscan ela: 80.174ms
+=== 2022-12-21T09:30:09.976437 ===
+Stats: rows_cnt: 4000, table_size: 961 MB, live tuples: 4000, dead tuples: 862450, vacuum_cnt: 0, autovacuum_cnt: 0
+> fullscan ela: 77.246ms
+
+=== 2022-12-21T09:30:13.540103 ===
+Stats: rows_cnt: 4000, table_size: 1067 MB, live tuples: 4000, dead tuples: 955845, vacuum_cnt: 0, autovacuum_cnt: 0
+> fullscan ela: 89.505ms
 ```
